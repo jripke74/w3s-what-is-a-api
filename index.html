@@ -14,7 +14,24 @@
 </head>
 
 <body>
-
+<!doctype html>
+<html>
+<body>
+  <h1>API Challenge</h1>
+  <input type="text" id="nameInput" placeholder="Enter your name">
+  <button id="saveButton">Save Name</button>
+  <script>
+    const nameInput = document.getElementById('nameInput');
+    const saveButton = document.getElementById('saveButton');
+    function saveName() {
+        const name = nameInput.value;
+        console.log("This", name);
+        localStorage.setItem('name', name); 
+    }
+    saveButton.addEventListener("click", saveName);
+  </script>
+</body>
+</html>
 </body>
 
 </html>
